@@ -18,6 +18,11 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene("Directions");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main_Menu");
+    }
+
     public void Quit()
     {
         Application.Quit();
