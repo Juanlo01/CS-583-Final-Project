@@ -7,19 +7,22 @@ public class ButtonSoundManager : MonoBehaviour
 
     void Awake()
     {
-        // Singleton pattern to ensure only one SoundManager exists
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);  // Keep this object between scene loads
-            audioSource = gameObject.AddComponent<AudioSource>();
+            //For persistence across scenes will not work if removed.
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
-
     public void PlaySound(AudioClip clip)
     {
         // Ensure audio can replay each time
@@ -27,8 +30,8 @@ public class ButtonSoundManager : MonoBehaviour
         {
             audioSource.Stop();
         }
+
         audioSource.clip = clip;
         audioSource.Play();
     }
 }
-

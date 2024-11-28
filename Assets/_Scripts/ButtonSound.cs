@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +6,7 @@ public class ButtonSound : MonoBehaviour
 {
     public AudioClip buttonSound;  // Drag your button sound here
     private Button button;
+    private Color originalColor;
 
     void Start()
     {
@@ -12,7 +14,9 @@ public class ButtonSound : MonoBehaviour
 
         if (button != null)
         {
+            originalColor = button.colors.normalColor;
             button.onClick.AddListener(PlayButtonSound);
+
         }
     }
 
@@ -22,6 +26,12 @@ public class ButtonSound : MonoBehaviour
         if (ButtonSoundManager.instance != null && buttonSound != null)
         {
             ButtonSoundManager.instance.PlaySound(buttonSound);
+            Debug.Log("ButtonSound Played");
         }
     }
+    
 }
+
+
+
+
