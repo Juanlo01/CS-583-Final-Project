@@ -81,7 +81,8 @@ public class PauseMenu : MonoBehaviour
     public void Settings()
     {
         //Saves this scene as the previous scene.
-        PlayerPrefs.SetString("PreviousScene", SceneManager.GetActiveScene().name);
+        //PlayerPrefs.SetString("PreviousScene", SceneManager.GetActiveScene().name);
+        SettingsManager.SetPreviousScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("Settings_Menu");
     }
     
