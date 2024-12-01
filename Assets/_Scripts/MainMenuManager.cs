@@ -23,6 +23,12 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene("Directions");
     }
 
+    public void Settings()
+    {
+        PlayerPrefs.SetString("PreviousScene", "Main_Menu");
+        SceneManager.LoadScene("Settings_Menu");
+    }
+
     public void MainMenu()
     {
         SceneManager.LoadScene("Main_Menu");

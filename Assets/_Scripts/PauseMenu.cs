@@ -77,6 +77,13 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Exited Game");
     }
+
+    public void Settings()
+    {
+        //Saves this scene as the previous scene.
+        PlayerPrefs.SetString("PreviousScene", SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Settings_Menu");
+    }
     
 }
 
