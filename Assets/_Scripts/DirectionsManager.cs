@@ -10,7 +10,8 @@ public class DirectionsManager : MonoBehaviour
     public GameObject CharacterPanel;
     public GameObject ControlsPanel;
     public GameObject MainPanel;
-    
+    public GameObject TowersPanel;
+
     public void MainMenu()
     {
         SceneManager.LoadScene("Main_Menu");
@@ -23,6 +24,7 @@ public class DirectionsManager : MonoBehaviour
         EnemiesPanel.SetActive(false);
         CharacterPanel.SetActive(false);
         ControlsPanel.SetActive(false);
+        TowersPanel.SetActive(false);
     }
 
     public void MainPanelActive()
@@ -31,6 +33,7 @@ public class DirectionsManager : MonoBehaviour
         CharacterPanel.SetActive(false);
         ControlsPanel.SetActive(false);
         EnemiesPanel.SetActive(false);
+        TowersPanel.SetActive(false);
     }
 
     public void Objective()
@@ -39,6 +42,7 @@ public class DirectionsManager : MonoBehaviour
         EnemiesPanel.SetActive(false);
         CharacterPanel.SetActive(false);
         ControlsPanel.SetActive(false);
+        TowersPanel.SetActive(false);
     }
 
     public void Enemies()
@@ -47,6 +51,7 @@ public class DirectionsManager : MonoBehaviour
         GOPanel.SetActive(false);
         CharacterPanel.SetActive(false);
         ControlsPanel.SetActive(false);
+        TowersPanel.SetActive(false);
     }
 
     public void Character()
@@ -55,6 +60,7 @@ public class DirectionsManager : MonoBehaviour
         ControlsPanel.SetActive(false);
         EnemiesPanel.SetActive(false);
         GOPanel.SetActive(false);
+        TowersPanel.SetActive(false);
     }
 
     public void Controls()
@@ -63,6 +69,24 @@ public class DirectionsManager : MonoBehaviour
         CharacterPanel.SetActive(false);
         EnemiesPanel.SetActive(false);
         GOPanel.SetActive(false);
+        TowersPanel.SetActive(false);
     }
-    
+
+    public void Towers()
+    {
+        ControlsPanel.SetActive(false);
+        CharacterPanel.SetActive(false);
+        EnemiesPanel.SetActive(false);
+        GOPanel.SetActive(false);
+        TowersPanel.SetActive(true);
+    }
+
 }
+
+
+
+
+
+
+
+
