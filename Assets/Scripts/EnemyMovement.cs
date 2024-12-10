@@ -43,6 +43,7 @@ public class Chaser : MonoBehaviour {
 		// have chaser go towards waypoint
 		transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
+		// check if minDist threshhold allows enemy to go to next waypoint
 		//Debug.Log($"Moving towards: {target.name}, Distance: {Vector3.Distance(transform.position, target.position)}");
 
 		if (Vector3.Distance(transform.position, target.position) <= minDist) {

@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 1508813270738229410}
   - component: {fileID: 3273812412524702572}
   m_Layer: 0
-  m_Name: ufo
+  m_Name: UFO
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -348,7 +348,7 @@ Transform:
   m_GameObject: {fileID: 5678372459245368642}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -61.3, y: 4.36, z: -0.383}
+  m_LocalPosition: {x: -65, y: 2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -380,7 +380,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -431,8 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  minDist: 0.5
-  target: {fileID: 0}
+  minDist: 0.2
 --- !u!1 &8628247742397491051
 GameObject:
   m_ObjectHideFlags: 0
