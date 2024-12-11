@@ -7,11 +7,18 @@ public class Chaser : MonoBehaviour {
 	
 	public float speed = 20.0f;
 	public float minDist = 0.5f;
-	public Transform target;
+	private Transform target;
+	private int wavepointIndex = 0;
 
 	// Use this for initialization
 	void Start () 
 	{
+		// Initialize the first target waypoint
+        if (Waypoints.points != null && Waypoints.points.Length > 0)
+        {
+            target = Waypoints.points[0];
+        }
+
 		// if no target specified, assume the player
 		if (target == null) {
 
@@ -25,24 +32,35 @@ public class Chaser : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (target == null)
-			return;
+		if (target == null) {
+    		Debug.LogWarning("Target is null.");
+    		return;
+		}
 
 		// face the target
 		transform.LookAt(target);
 
-		//get the distance between the chaser and the target
-		float distance = Vector3.Distance(transform.position,target.position);
+		// have chaser go towards waypoint
+		transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
-		//so long as the chaser is farther away than the minimum distance, move towards it at rate speed.
-		if(distance > minDist)	
-			transform.position += transform.forward * speed * Time.deltaTime;	
+		// check if minDist threshhold allows enemy to go to next waypoint
+		//Debug.Log($"Moving towards: {target.name}, Distance: {Vector3.Distance(transform.position, target.position)}");
 
+		if (Vector3.Distance(transform.position, target.position) <= minDist) {
+			Debug.Log("Reached waypoint, getting next...");
+			GetNextWaypoint();
+		} 
 	}
 
-	// Set the target of the chaser
-	public void SetTarget(Transform newTarget){
-            target = newTarget;
+	// Set the next waypoint of the chaser
+	void GetNextWaypoint() {
+
+		if (wavepointIndex >= Waypoints.points.Length - 1) {
+			Destroy(gameObject);
+			return;
+		}
+		wavepointIndex++;
+		target = Waypoints.points[wavepointIndex];
 	}
 
 }
