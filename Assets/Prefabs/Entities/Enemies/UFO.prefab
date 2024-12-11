@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 6118528661517187471}
   - component: {fileID: 1508813270738229410}
   - component: {fileID: 3273812412524702572}
+  - component: {fileID: 2847363107438600404}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Enemy
@@ -347,9 +348,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5678372459245368642}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -65, y: 2, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6290019002996440933}
@@ -357,7 +358,7 @@ Transform:
   - {fileID: 4737485011643270763}
   - {fileID: 8911901337908190066}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1096569129146672674
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -413,7 +414,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5678372459245368642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 709b5c8767f4d614b8e9e510be4799ae, type: 3}
   m_Name: 
@@ -425,13 +426,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5678372459245368642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1632e52177604a4aa196c55c088269a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
   minDist: 0.2
+--- !u!114 &2847363107438600404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5678372459245368642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f3b81cc0c02224da5b3e0514fba9d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NodeIndex: 0
+  MaxHealth: 5
+  Health: 0
+  Speed: 4
+  ID: 0
 --- !u!1 &8628247742397491051
 GameObject:
   m_ObjectHideFlags: 0
