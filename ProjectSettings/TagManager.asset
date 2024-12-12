@@ -8,6 +8,7 @@ TagManager:
   - Tower
   - CanPlace
   - Can'tPlace
+  - Audio
   layers:
   - Default
   - TransparentFX
