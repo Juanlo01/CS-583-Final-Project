@@ -47,4 +47,11 @@ public class bullet : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    private void OnCollisionEnter(Collision collision){
+        if (collision.transform.tag == "Enemy"){
+            // do damage here, for example:
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
+        }
+    }
 }
