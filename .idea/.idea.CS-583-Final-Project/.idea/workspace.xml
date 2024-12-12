@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="badb0945-1f80-4ba9-9a35-bd0f079ac74c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CS-583-Final-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS-583-Final-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/DirectionsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/DirectionsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_Select_Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_Select_Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Settings_Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Settings_Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SettingsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/SettingsManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +33,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Menus&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mergedNewLevel&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,

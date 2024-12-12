@@ -21,6 +21,13 @@ public class SettingsManager : MonoBehaviour
         volumeSlider.onValueChanged.AddListener(SetVolume);
         difficultyDropdown.onValueChanged.AddListener(SetDifficulty);
         previousScene = PlayerPrefs.GetString("PreviousScene", "Main_Menu");
+        
+        brightnessSlider.value = PlayerPrefs.GetFloat("Brightness");
+        contrastSlider.value = PlayerPrefs.GetFloat("Contrast");
+        textSizeSlider.value = PlayerPrefs.GetFloat("TextSize");
+        volumeSlider.value = PlayerPrefs.GetFloat("Volume");
+        difficultyDropdown.value = PlayerPrefs.GetInt("Difficulty");
+        
     }
 
     public void MainMenu()
