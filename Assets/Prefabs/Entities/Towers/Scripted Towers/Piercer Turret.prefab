@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6963534946865720587}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2735329858203078516}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.044, y: 0.517, z: 0.937}
+  m_LocalPosition: {x: -0.044, y: 1.544, z: 0.937}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 7344920063317219000}
   - component: {fileID: 449058853362236249}
   - component: {fileID: 6307514985492623554}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Untitled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 2902329424904488348}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.027, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124,9 +124,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4956062594922581071}
   - component: {fileID: 3867028686093067968}
-  m_Layer: 0
+  - component: {fileID: 3529998521797152800}
+  m_Layer: 3
   m_Name: Piercer Turret
-  m_TagString: Untagged
+  m_TagString: Can'tPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +142,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.69, y: 0.89, z: 4.090066}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7344920063317219000}
@@ -169,6 +170,27 @@ MonoBehaviour:
   turnSpeed: 10
   bulletPrefab: {fileID: 7437521915946459426, guid: c681293642a20de4ba3fa9fd5e0fd668, type: 3}
   firePoint: {fileID: 6963534946865720587}
+--- !u!65 &3529998521797152800
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732141175570585333}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.008513, y: 2.0951295, z: 2.0033524}
+  m_Center: {x: -0.042351007, y: 1.0247376, z: -0.21152937}
 --- !u!1 &6710685995052232364
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +202,7 @@ GameObject:
   - component: {fileID: 1671861144451042977}
   - component: {fileID: 693356018553181401}
   - component: {fileID: 268359371714594948}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Untitled.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +218,7 @@ Transform:
   m_GameObject: {fileID: 6710685995052232364}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.027, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

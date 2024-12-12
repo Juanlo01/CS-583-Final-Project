@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1024089591761445760}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 9139583777242799593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.619}
+  m_LocalPosition: {x: 0, y: 1.2989999, z: 0.619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79,9 +79,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3134957184823909115, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.299
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}
       propertyPath: m_Name
       value: Dragon Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}
+      propertyPath: m_TagString
+      value: Can'tPlace
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192378413368313096, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114165217110617692, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707503809228495303, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2989999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -93,6 +117,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2716115736769112053}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8273042094013670462}
   m_SourcePrefab: {fileID: 100100000, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}
 --- !u!4 &294201137663633657 stripped
 Transform:
@@ -124,6 +151,27 @@ MonoBehaviour:
   turnSpeed: 10
   bulletPrefab: {fileID: 7437521915946459426, guid: c681293642a20de4ba3fa9fd5e0fd668, type: 3}
   firePoint: {fileID: 1024089591761445760}
+--- !u!65 &8273042094013670462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107576324983403075}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.9884477, y: 2.2235575, z: 1.995908}
+  m_Center: {x: -0.023116112, y: 1.0539198, z: -0.29920554}
 --- !u!4 &7595605534842115797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7707503809228495303, guid: 097bc0b0c7fa46948aad333703c512b0, type: 3}

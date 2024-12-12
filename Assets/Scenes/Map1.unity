@@ -4736,7 +4736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '$200
+  m_text: '$150
 
     Piercer Turret'
   m_isRightToLeft: 0
@@ -7809,7 +7809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '$150
+  m_text: '$200
 
     Ray Turret'
   m_isRightToLeft: 0
@@ -8851,8 +8851,8 @@ MonoBehaviour:
   NodeParent: {fileID: 937314988}
   LoopShouldEnd: 0
   Waves:
-  - enemyTypeIDs: 01000000020000000300000004000000
-    enemyCounts: 01000000010000000100000001000000
+  - enemyTypeIDs: 01000000
+    enemyCounts: 01000000
     spawnInterval: 1
 --- !u!4 &1345616659
 Transform:
