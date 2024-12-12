@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f93faaa425ac286429e860a10451bfea, type: 3}
   m_Name: UFO
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 0}
-  EnemyID: 0
+  EnemyPrefab: {fileID: 5678372459245368642, guid: 76c0791531e1f8942943c4432a4b2406, type: 3}
+  EnemyID: 2
