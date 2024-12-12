@@ -10687,8 +10687,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8482952525581287181, guid: 9f78637820acd304bb15c2fc7a012337, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8867511741595899863}
   m_SourcePrefab: {fileID: 100100000, guid: 9f78637820acd304bb15c2fc7a012337, type: 3}
+--- !u!1 &8867511741595899862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8482952525581287181, guid: 9f78637820acd304bb15c2fc7a012337, type: 3}
+  m_PrefabInstance: {fileID: 8867511741595899861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8867511741595899863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8867511741595899862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f2460d7fc3d4a48a8830345ada49ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  range: 3
+  fireRate: 1
+  enemyTag: Enemy
+  partToRotate: {fileID: 0}
+  turnSpeed: 10
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
