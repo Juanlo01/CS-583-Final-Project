@@ -5,6 +5,8 @@ using UnityEngine;
 public class TowerPlacement : MonoBehaviour
 {
 
+    [SerializeField] private LayerMask PlacementCheckMask;
+    [SerializeField] private LayerMask PlacementCollideMask;
     [SerializeField] private Camera PlayerCamera;
     private GameObject CurrentPlacingTower;
 
@@ -20,12 +22,25 @@ public class TowerPlacement : MonoBehaviour
             Ray camray = PlayerCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit HitInfo;
 
-            if (Physics.Raycast(camray, out HitInfo, 100f)){
+            if (Physics.Raycast(camray, out HitInfo, 100f, PlacementCollideMask)){
                 CurrentPlacingTower.transform.position = HitInfo.point;
             }
 
-            if (Input.GetMouseButtonDown(0) && HitInfo.collider.gameObject){
-                CurrentPlacingTower = null;
+            if (Input.GetMouseButtonDown(0) && HitInfo.collider.gameObject != null){
+                if (!HitInfo.collider.gameObject.CompareTag("Can'tPlace")){
+
+                    BoxCollider TowerCollider = CurrentPlacingTower.gameObject.GetComponent<BoxCollider>();
+                    TowerCollider.isTrigger = true;
+
+                    Vector3 BoxCenter = CurrentPlacingTower.gameObject.transform.position + TowerCollider.center;
+                    Vector3 HalfExtents = TowerCollider.size / 2;
+
+                    if (Physics.CheckBox(BoxCenter, HalfExtents, Quaternion.identity, PlacementCheckMask, QueryTriggerInteraction.Ignore)){
+                        TowerCollider.isTrigger = false;
+                        CurrentPlacingTower = null;
+                    }
+                    
+                }
             }
 
         }
