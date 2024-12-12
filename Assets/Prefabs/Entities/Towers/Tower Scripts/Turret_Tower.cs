@@ -61,13 +61,14 @@ public class Turret_Tower : MonoBehaviour
             return;
         }
 
-        //target lock
-        Vector3 dir = target.position - transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
-        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        Vector3 dir = target.position - transform.position; // Direction to the target
+        dir.y = 0; // Keep the direction in the horizontal plane to avoid tilting
 
-        if(fireCountDown <= 0f)
+        Quaternion lookRotation = Quaternion.LookRotation(dir); // Calculate the desired rotation
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(90f, rotation.y, 0f); // Maintain the 90-degree X-axis rotation
+
+        if (fireCountDown <= 0f)
         {
             Shoot();
             fireCountDown = 1f / fireRate;
