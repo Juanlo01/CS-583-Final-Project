@@ -7,7 +7,7 @@ public class bullet : MonoBehaviour
 {
 
     private Transform target;
-
+    public float damage = 1f;
     public float speed = 70f;
     
     public void Seek(Transform _target)
@@ -39,7 +39,12 @@ public class bullet : MonoBehaviour
 
     void HitTarget()
     {
-        Destroy(target.gameObject);
+        EnemyHealth enemyHealth = target.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
+        {
+            Debug.Log("Hit!");
+            enemyHealth.TakeDamage(damage);
+        }
         Destroy(gameObject);
     }
 }
