@@ -18,6 +18,10 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene("Level_Select_Menu");
     }
 
+    public void Level1(){
+        SceneManager.LoadScene("Map1");
+    }
+
     public void Directions()
     {
         SceneManager.LoadScene("Directions");
