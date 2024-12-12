@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 30990500825938881}
   - component: {fileID: 4706864133525217418}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Basic
-  m_TagString: Untagged
+  m_TagString: Can'tPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f3b81cc0c02224da5b3e0514fba9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NodeIndex: 0
   MaxHealth: 4
   Health: 0
   Speed: 4
@@ -61,7 +62,7 @@ GameObject:
   - component: {fileID: 8677692116092059157}
   - component: {fileID: 1277007861766077931}
   - component: {fileID: 8490797464777144503}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
