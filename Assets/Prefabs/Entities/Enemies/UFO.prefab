@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2690005098321546996}
   - component: {fileID: 3091687834173789507}
   - component: {fileID: 1044476454970483654}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 3596288871754489311}
   - component: {fileID: 3722753031366053562}
   - component: {fileID: 7337576996171113912}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Disc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 5715841657726881999}
   - component: {fileID: 6241564884955817742}
   - component: {fileID: 3302188320880513419}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 1508813270738229410}
   - component: {fileID: 3273812412524702572}
   - component: {fileID: 2847363107438600404}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UFO
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 8172459140627626478}
   - component: {fileID: 5479132949986668456}
   - component: {fileID: 3381101353786058464}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}

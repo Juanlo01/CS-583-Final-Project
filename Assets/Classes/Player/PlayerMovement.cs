@@ -33,6 +33,12 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKey(KeyCode.LeftShift)){
             Velocity.y = -1f;
         }
+        else if (Input.GetKey(KeyCode.LeftControl)){
+            speed = 8f;
+        }
+        else {
+            speed = 4f;
+        }
 
         Controller.Move(MoveVector * speed * Time.deltaTime);
         Controller.Move(Velocity * speed * Time.deltaTime);
