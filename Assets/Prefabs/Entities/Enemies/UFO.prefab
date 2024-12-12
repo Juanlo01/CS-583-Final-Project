@@ -449,7 +449,7 @@ MonoBehaviour:
   MaxHealth: 5
   Health: 0
   Speed: 4
-  ID: 0
+  ID: 2
 --- !u!1 &8628247742397491051
 GameObject:
   m_ObjectHideFlags: 0
