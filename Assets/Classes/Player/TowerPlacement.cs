@@ -8,6 +8,7 @@ public class TowerPlacement : MonoBehaviour
     [SerializeField] private LayerMask PlacementCheckMask;
     [SerializeField] private LayerMask PlacementCollideMask;
     [SerializeField] private Camera PlayerCamera;
+    [SerializeField] private PlayerStats PlayerStatistics;
     private GameObject CurrentPlacingTower;
 
 
@@ -47,6 +48,17 @@ public class TowerPlacement : MonoBehaviour
     }
 
     public void SetTowerToPlace(GameObject tower){
-        CurrentPlacingTower = Instantiate(tower, Vector3.zero, Quaternion.identity);
+        
+        Turret_Tower turretTower = tower.GetComponent<Turret_Tower>();
+        int TowerSummonCost = turretTower.SummonCost;
+        
+        if (PlayerStatistics.GetMoney() >= TowerSummonCost) {
+            CurrentPlacingTower = Instantiate(tower, Vector3.zero, Quaternion.identity);
+            PlayerStatistics.AddMoney(-TowerSummonCost);
+        }
+        else {
+            Debug.Log("You need more money to purchase a " + tower.name);
+        }
+
     }
 }

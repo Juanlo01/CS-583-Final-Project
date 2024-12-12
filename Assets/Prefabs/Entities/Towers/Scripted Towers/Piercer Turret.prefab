@@ -169,6 +169,7 @@ MonoBehaviour:
   turnSpeed: 10
   bulletPrefab: {fileID: 7437521915946459426, guid: c681293642a20de4ba3fa9fd5e0fd668, type: 3}
   firePoint: {fileID: 6963534946865720587}
+  SummonCost: 200
 --- !u!1 &6710685995052232364
 GameObject:
   m_ObjectHideFlags: 0

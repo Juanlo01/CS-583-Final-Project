@@ -21,6 +21,8 @@ public class Turret_Tower : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    public int SummonCost = 100;
+
     // Start is called before the first frame update
     void Start()
     {

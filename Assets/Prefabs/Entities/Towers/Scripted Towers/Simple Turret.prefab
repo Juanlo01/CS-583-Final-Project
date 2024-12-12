@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2121d84effcdad5478fdb510dc3fa1c8, type: 3}
       propertyPath: m_Name
-      value: Simple Turret 1
+      value: Simple Turret
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -119,6 +119,7 @@ MonoBehaviour:
   turnSpeed: 10
   bulletPrefab: {fileID: 7437521915946459426, guid: c681293642a20de4ba3fa9fd5e0fd668, type: 3}
   firePoint: {fileID: 8827927834504841737}
+  SummonCost: 25
 --- !u!4 &6579412533240055714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2121d84effcdad5478fdb510dc3fa1c8, type: 3}
