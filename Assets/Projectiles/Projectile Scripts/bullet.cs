@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ public class bullet : MonoBehaviour
 {
 
     private Transform target;
-
+    public float damage = 1f;
     public float speed = 70f;
     
     public void Seek(Transform _target)
@@ -38,6 +39,12 @@ public class bullet : MonoBehaviour
 
     void HitTarget()
     {
+        EnemyHealth enemyHealth = target.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
+        {
+            Debug.Log("Hit!");
+            enemyHealth.TakeDamage(damage);
+        }
         Destroy(gameObject);
     }
 }
