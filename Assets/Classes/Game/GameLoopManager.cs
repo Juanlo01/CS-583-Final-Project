@@ -17,8 +17,8 @@ public class GameLoopManager : MonoBehaviour
     [System.Serializable]
     public struct Wave
     {
-        public int enemyCount; // Number of enemies in the wave
-        public int enemyTypeID; // Enemy type ID for the wave
+        public int[] enemyTypeIDs; // Array to store multiple enemy type IDs for the wave
+        public int[] enemyCounts; // Array to store the number of enemies for each enemy type
         public float spawnInterval; // Time between spawns
     }
 
@@ -48,10 +48,18 @@ public class GameLoopManager : MonoBehaviour
             Wave currentWave = Waves[currentWaveIndex];
             Debug.Log($"Starting Wave {currentWaveIndex + 1}");
 
-            for (int i = 0; i < currentWave.enemyCount; i++)
+            // Loop through each enemy type in the wave
+            for (int i = 0; i < currentWave.enemyTypeIDs.Length; i++)
             {
-                EnqueueEnemyIDToSummon(currentWave.enemyTypeID);
-                yield return new WaitForSeconds(currentWave.spawnInterval);
+                int enemyTypeID = currentWave.enemyTypeIDs[i];
+                int enemyCount = currentWave.enemyCounts[i];
+
+                // Spawn the enemies of this type
+                for (int j = 0; j < enemyCount; j++)
+                {
+                    EnqueueEnemyIDToSummon(enemyTypeID);
+                    yield return new WaitForSeconds(currentWave.spawnInterval);
+                }
             }
 
             // Wait until all enemies are removed before progressing
@@ -158,13 +166,29 @@ public struct MoveEnemiesJob : IJobParallelForTransform
 
     public void Execute(int index, TransformAccess transform)
     {
+        // Only move if the enemy has a next node to move to
         if (NodeIndex[index] < NodePositions.Length)
         {
-            Vector3 PositionToMoveTo = NodePositions[NodeIndex[index]];
-            transform.position = Vector3.MoveTowards(transform.position, PositionToMoveTo, EnemySpeed[index] * deltaTime);
+            Vector3 targetPosition = NodePositions[NodeIndex[index]];
 
-            if (transform.position == PositionToMoveTo)
+            // Move towards the next node
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, EnemySpeed[index] * deltaTime);
+
+            // Make the enemy face the next node
+            if (transform.position != targetPosition)
             {
+                // Calculate the direction to the next node
+                Vector3 direction = (targetPosition - transform.position).normalized;
+                
+                // Rotate the enemy to face the next node
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+                // Apply the rotation with smooth interpolation (optional)
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 360 * deltaTime);
+            }
+            else
+            {
+                // If the enemy reached the target node, increment the node index to go to the next one
                 NodeIndex[index]++;
             }
         }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2428860760186730382}
   - component: {fileID: 6105365630768715938}
   - component: {fileID: 340611233083339714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 6465841464836129883}
   - component: {fileID: 7658397478563241401}
   - component: {fileID: 5331861047906236519}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 6904242492829127449}
   - component: {fileID: 7814191346682385240}
   - component: {fileID: 4087495917147982836}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,10 +328,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4383371857187604219}
-  - component: {fileID: 6261897610985483476}
-  m_Layer: 0
+  - component: {fileID: 3869638464256830157}
+  m_Layer: 6
   m_Name: Roller
-  m_TagString: Untagged
+  m_TagString: Can'tPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2246293932170625494}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -58.618, y: 0.844, z: -0.271}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -357,28 +357,24 @@ Transform:
   - {fileID: 7458528291269618977}
   - {fileID: 3733620211825848534}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &6261897610985483476
-Animator:
-  serializedVersion: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &3869638464256830157
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2246293932170625494}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 99244d8c81fb3cd49b49231968a59822, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f3b81cc0c02224da5b3e0514fba9d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NodeIndex: 0
+  MaxHealth: 0
+  Health: 0
+  Speed: 3
+  ID: 3
 --- !u!1 &2461187685226571206
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +387,7 @@ GameObject:
   - component: {fileID: 687531048699563514}
   - component: {fileID: 2987015880039602533}
   - component: {fileID: 3003648488459429744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +494,7 @@ GameObject:
   - component: {fileID: 6796919043890753484}
   - component: {fileID: 3975123560280110766}
   - component: {fileID: 7410451863647042028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +601,7 @@ GameObject:
   - component: {fileID: 1663433388338192311}
   - component: {fileID: 2870243898380214635}
   - component: {fileID: 8583439121506416788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +708,7 @@ GameObject:
   - component: {fileID: 6931389555985519556}
   - component: {fileID: 1631260098701022898}
   - component: {fileID: 6268912745819131717}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
