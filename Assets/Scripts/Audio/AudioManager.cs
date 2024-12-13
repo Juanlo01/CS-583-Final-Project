@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip EnemySpawnSFX;
     public AudioClip EnemyGetsToBaseSFX;
-    public AudioClip NextWaveSFX;
+    public AudioClip EnemyDieSFX;
     public AudioClip TowerPlacementSFX;
 
     public void PlaySFX(AudioClip clip) {

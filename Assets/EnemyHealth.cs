@@ -7,6 +7,13 @@ public class EnemyHealth : MonoBehaviour
     public float health = 4f;
     public float currentHealth;
 
+    AudioManager audioManager;
+
+    private void Awake() {
+        GameObject audioObject = GameObject.FindWithTag("Audio");
+        audioManager = audioObject.GetComponent<AudioManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +26,14 @@ public class EnemyHealth : MonoBehaviour
 
         if(currentHealth <= 0)
         {
+
             Die();
         }
     }
 
     void Die()
     {
+        audioManager.PlaySFX(audioManager.EnemyDieSFX);
         Destroy(gameObject);
     }
 }
