@@ -22,6 +22,26 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene("Map1");
     }
 
+    public void Level2()
+    {
+        SceneManager.LoadScene("Map2");
+    }
+
+    public void Level3()
+    {
+        SceneManager.LoadScene("Map3");
+    }
+
+    public void Level4()
+    {
+        SceneManager.LoadScene("Map4");
+    }
+
+    public void Level5()
+    {
+        SceneManager.LoadScene("Map5");
+    }
+
     public void Directions()
     {
         SceneManager.LoadScene("Directions");
