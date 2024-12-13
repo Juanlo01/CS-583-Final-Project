@@ -29,12 +29,7 @@ public class SettingsManager : MonoBehaviour
         difficultyDropdown.value = PlayerPrefs.GetInt("Difficulty");
         
     }
-
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("Main_Menu");
-    }
-
+    
     public void BackToPreviousScene()
     {
         if (!string.IsNullOrEmpty(previousScene) && previousScene != "Settings")
@@ -114,7 +109,6 @@ public class SettingsManager : MonoBehaviour
     }
     
 }
-
 
 
 

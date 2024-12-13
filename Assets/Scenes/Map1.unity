@@ -1358,7 +1358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &165217698
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7054,7 +7054,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943915369}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -11531,6 +11531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1971725291}
   - component: {fileID: 1971725290}
+  - component: {fileID: 1971725292}
   m_Layer: 0
   m_Name: GUI/PauseManager
   m_TagString: Untagged
@@ -11552,6 +11553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 165217697}
   mainMenuUI: {fileID: 745532435}
+  userInterface: {fileID: 690981696}
 --- !u!4 &1971725291
 Transform:
   m_ObjectHideFlags: 0
@@ -11567,6 +11569,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1971725292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971725289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b1fd4bc47654be78b860a8c8f96e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 165217697}
+  userInterface: {fileID: 690981696}
 --- !u!1 &1973309978
 GameObject:
   m_ObjectHideFlags: 0
@@ -12610,10 +12626,10 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 943915373}
   - {fileID: 2106112728}
   - {fileID: 1360231269}
   - {fileID: 520273545}
-  - {fileID: 943915373}
   - {fileID: 1971725291}
   - {fileID: 1061541106}
   - {fileID: 1345616659}
