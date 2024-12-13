@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EntitySummoner : MonoBehaviour{
 
+    public static EntitySummoner Instance;
     public static List<Enemy> EnemiesInGame;
     public static List<Transform> EnemiesInGameTransform;
     public static Dictionary<int, GameObject> EnemyPrefabs;
@@ -11,6 +12,18 @@ public class EntitySummoner : MonoBehaviour{
 
     private static bool IsInitialized;
 
+    AudioManager audioManager;
+
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Destroy(gameObject);
+        }
+
+        GameObject audioObject = GameObject.FindWithTag("Audio");
+        audioManager = audioObject.GetComponent<AudioManager>();
+    }
     public static void Init(){
 
         if (!IsInitialized){
@@ -36,6 +49,7 @@ public class EntitySummoner : MonoBehaviour{
 
         public static Enemy SummonEnemy(int EnemyID){
             Enemy SummonedEnemy = null;
+            
 
             if(EnemyPrefabs.ContainsKey(EnemyID)){
                 Queue<Enemy> ReferenceQueue = EnemyObjectPools[EnemyID];
@@ -60,6 +74,10 @@ public class EntitySummoner : MonoBehaviour{
             EnemiesInGameTransform.Add(SummonedEnemy.transform);
             EnemiesInGame.Add(SummonedEnemy);
             SummonedEnemy.ID = EnemyID;
+
+            Instance.audioManager.PlaySFX(Instance.audioManager.EnemySpawnSFX);
+
+
             return SummonedEnemy;
         }
         
@@ -69,6 +87,8 @@ public class EntitySummoner : MonoBehaviour{
             EnemyToRemove.gameObject.SetActive(false);
             EnemiesInGameTransform.Remove(EnemyToRemove.transform);
             EnemiesInGame.Remove(EnemyToRemove);
+            Instance.audioManager.PlaySFX(Instance.audioManager.EnemyGetsToBaseSFX);
+            PlayerStats.Instance.DecrementLives();
         }
 
     }

@@ -9,9 +9,10 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Clips")]
 
-    public AudioClip TurretFireSFX;
-    public AudioClip PlaceTurretSFX;
+    public AudioClip EnemySpawnSFX;
+    public AudioClip EnemyGetsToBaseSFX;
     public AudioClip NextWaveSFX;
+    public AudioClip TowerPlacementSFX;
 
     public void PlaySFX(AudioClip clip) {
         SFXSource.PlayOneShot(clip);
