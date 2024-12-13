@@ -162,7 +162,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7437521915946459426, guid: c681293642a20de4ba3fa9fd5e0fd668, type: 3}
   firePoint: {fileID: 2117858759849400495}
   SummonCost: 50
-  fireSound: {fileID: 0}
+  fireSound: {fileID: 8300000, guid: ad00705ac426345289f10c69b726d683, type: 3}
 --- !u!65 &8510529288971350052
 BoxCollider:
   m_ObjectHideFlags: 0
