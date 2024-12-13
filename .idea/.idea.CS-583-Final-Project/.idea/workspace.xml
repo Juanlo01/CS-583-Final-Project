@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="badb0945-1f80-4ba9-9a35-bd0f079ac74c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CS-583-Final-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS-583-Final-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_Select_Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_Select_Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Settings_Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Settings_Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SettingsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/SettingsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PauseMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +88,7 @@
       <workItem from="1732643588755" duration="1979000" />
       <workItem from="1732672883411" duration="4231000" />
       <workItem from="1732947262397" duration="4346000" />
+      <workItem from="1734047605793" duration="881000" />
     </task>
     <servers />
   </component>

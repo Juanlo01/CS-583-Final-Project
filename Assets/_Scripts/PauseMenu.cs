@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject mainMenuUI;
+    public GameObject userInterface;
     private bool isPaused = false;
     
     void Start()
@@ -30,7 +31,8 @@ public class PauseMenu : MonoBehaviour
             }
         }
         if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
-        if (mainMenuUI != null) mainMenuUI.SetActive(true);
+        if (mainMenuUI != null) mainMenuUI.SetActive(false);
+        if (userInterface != null) userInterface.SetActive(true);
     }
 
     void Update()
@@ -48,7 +50,8 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
-        if (mainMenuUI != null) mainMenuUI.SetActive(true);
+        if (mainMenuUI != null) mainMenuUI.SetActive(false);
+        if (userInterface != null) userInterface.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
@@ -57,6 +60,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (pauseMenuUI != null)pauseMenuUI.SetActive(true);
         if (mainMenuUI != null)mainMenuUI.SetActive(false);
+        if (userInterface != null)userInterface.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
     }
