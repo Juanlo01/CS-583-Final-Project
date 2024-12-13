@@ -22,10 +22,21 @@ public class Turret_Tower : MonoBehaviour
     public Transform firePoint;
 
     public int SummonCost = 100;
+    
+    [Header("Audio Settings")]
+    public AudioClip fireSound; // Sound for firing bullets
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Get the AudioSource component
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource component is missing! Add an AudioSource to the turret.");
+        }
+        
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
@@ -84,6 +95,7 @@ public class Turret_Tower : MonoBehaviour
     {
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet bullet = bulletGO.GetComponent<bullet>();
+        audioSource.PlayOneShot(fireSound);
 
         if (bullet != null)
         {

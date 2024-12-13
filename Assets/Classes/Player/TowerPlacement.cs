@@ -11,12 +11,6 @@ public class TowerPlacement : MonoBehaviour
     [SerializeField] private PlayerStats PlayerStatistics;
     private GameObject CurrentPlacingTower;
 
-
-    // Start is called before the first frame update
-    void Start(){
-        
-    }
-
     // Update is called once per frame
     void Update(){
         if (CurrentPlacingTower != null){
@@ -48,7 +42,7 @@ public class TowerPlacement : MonoBehaviour
     }
 
     public void SetTowerToPlace(GameObject tower){
-        
+
         Turret_Tower turretTower = tower.GetComponent<Turret_Tower>();
         int TowerSummonCost = turretTower.SummonCost;
         
